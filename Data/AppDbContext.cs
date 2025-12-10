@@ -15,7 +15,8 @@ namespace MyWorkItem.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Role>().HasData(new Role { Id = 1, RoleName = "Admin" });
+            modelBuilder.Entity<Role>()
+                .HasData(new Role { Id = 1, RoleName = "Admin" }, new Role { Id = 2, RoleName = "User" });
         }
     }
 }
